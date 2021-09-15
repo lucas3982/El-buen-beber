@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Permanent+Marker&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(190, 126, 223);
+}
+
+header {
+    width: 100%;
+}
+
+.header .main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navbar {
+    margin-top: 30px;
+
+}
+
+.navbar .brand {
+    display: flex;
+    margin: 20px 70px;
+    color: rgb(36, 102, 9);
+}
+
+.navbar .brand i {
+    font-size: 1.9em;
+}
+
+.navbar .brand h3 {
+    font-size: 1.6em;
+    margin: 5px 5px;
+}
+
+.menu ul {
+    display: flex;
+    color: white;
+    justify-content: flex-end;
+    margin: -50px 20px;
+}
+
+.menu ul li {
+    list-style: none;
+    margin-right: 50px;
+
+}
+
+.menu ul li a {
+    color: white;
+    font-size: 1.3em;
+}
+
+.menu ul li a:hover {
+    color: rgb(70, 136, 7);
+}
+
+.navbar .toggle-menu {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.navbar .toggle-menu i {
+    font-size: 1.8em;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+
+.container-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(61, 43, 43);
+}
+
+.container-info h1 {
+    font-size: 5em;
+    font-family: "Permanent Marker", cursive;
+    animation: lef-move 1s ease-in;
+    margin-left: 60px;
+}
+
+.container-info h2 {
+    font-size: 2em;
+    animation: rigth-move 1s ease-in;
+    margin-left: 60px;
+}
+
+.container-info .btn {
+    font-size: 1.2em;
+    width: 200px;
+    padding: 5px;
+    border-radius: 30px;
+    background-color: slateblue;
+    border: none;
+    color: rgb(12, 38, 44);
+    animation: rigth-move 1s ease-in;
+    margin-left: 60px;
+}
+
+.container-info .img-content {
+   max-width: 100%;
+    animation: up-move 1s ease-in;
+}
+
+.container-info .img-content img:hover {
+    filter: grayscale(60%);
+}
+
+.container-info .social-content li {
+    list-style: none;
+    margin: 20px;
+    animation: rigth-move 1s ease-in;
+
+}
+
+.container-info .social-content i {
+    font-size: 1.3em;
+    color: rgb(56, 7, 56);
+}
+
+.container-info .social-content i:hover {
+    transform: scale(1.5);
+}
+
+header .wave {
+    margin-top: -100px;
+}
+
+
+@media (max-width:570px) {
+
+    .navbar .brand i {
+        margin-left: -30px;
+    }
+
+
+    .navbar .toggle-menu i {
+        display: block;
+        margin: -60px 30px;
+    }
+    .navbar .menu ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: rgb(77, 44, 94);
+        position: fixed;
+        margin-top: 30px;
+        transform: translateX(-120%);
+        transition: 1s ease-in;
+
+    }
+
+    .navbar .menu .menu-on {
+        transform: translateX(-4%);
+    }
+
+    .navbar .menu ul li {
+        margin: 30px;
+        text-transform: uppercase;
+
+    }
+
+    .container-info .social-content i {
+        display: none;
+
+    }
+
+    .container-info {
+        flex-wrap: wrap-reverse;
+        margin: -50px 50px;
+    }
+
+    .container-info h1 {
+        font-size: 3em;
+        margin-top: -70px;
+    }
+
+
+    .container-info h2 {
+        font-size: 1.5em;
+    }
+
+    .container-info .img-content img {
+        margin-top: 70px;
+        
+
+    }
+
+    header .wave {
+        margin-top: 100px;
+    }
+    
+
+}
+
+
+/* animacion de h1*/
+
+@keyframes lef-move {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes rigth-move {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes up-move {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
